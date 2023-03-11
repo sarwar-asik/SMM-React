@@ -89,6 +89,8 @@ const Footer = () => {
               <Link
                 to="https://www.facebook.com/shah.muntachir/photos"
                 target="_blanck"
+                title='Muntacher Mihan Twitter'
+
                 className="transition-colors duration-300 text-deep-purple-100 hover:text-teal-accent-400"
               >
                 <svg viewBox="0 0 24 24" fill="currentColor" className="h-5">
@@ -97,6 +99,8 @@ const Footer = () => {
               </Link>
               <Link
                to="https://www.linkedin.com/in/shah-muntacher-hossain-mihan-7120541b5/" target="_blanck"
+               title='Muntacher Mihan Instragram'
+
                 className="transition-colors duration-300 text-deep-purple-100 hover:text-teal-accent-400"
               >
                 <svg viewBox="0 0 30 30" fill="currentColor" className="h-6">
@@ -107,13 +111,20 @@ const Footer = () => {
               <Link
                 to="https://www.facebook.com/shah.muntachir/photos"
                 target="_blanck"
+                title='Muntacher Mihan Facebook'
                 className="transition-colors duration-300 text-deep-purple-100 hover:text-teal-accent-400"
               >
                 <svg viewBox="0 0 24 24" fill="currentColor" className="h-5">
                   <path d="M22,0H2C0.895,0,0,0.895,0,2v20c0,1.105,0.895,2,2,2h11v-9h-3v-4h3V8.413c0-3.1,1.893-4.788,4.659-4.788 c1.325,0,2.463,0.099,2.795,0.143v3.24l-1.918,0.001c-1.504,0-1.795,0.715-1.795,1.763V11h4.44l-1,4h-3.44v9H22c1.105,0,2-0.895,2-2 V2C24,0.895,23.105,0,22,0z" />
                 </svg>
               </Link>
+            
             </div>
+          <a href='https://www.linkedin.com/in/sarwar-hossain-a29660257/' className='text-[10px] font-thin mt-1 text-slate-500 hover:underline'
+          title='sarwar LinkedIn'
+          target="_blanck"
+          rel="noopener noreferrer"
+          >Developed-by:sarwar_hossain</a>
           </div>
         </div>
       </div>

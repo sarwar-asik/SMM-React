@@ -8,6 +8,7 @@ import Contacts from "../components/pages/Contacts";
 import EditBlogs from "../components/pages/EditBlogs";
 import Header from "../components/pages/Header";
 import Login from "../components/pages/Login";
+import SignUp from "../components/pages/SIgnup";
 import ErrorPage from "../shared/Errorpage";
 
 const router = createBrowserRouter([
@@ -48,10 +49,10 @@ const router = createBrowserRouter([
         path: "/EditBlogs",
         element: <EditBlogs />,
       },
-      {
-        path: "/Blogs",
-        element: <Blogs />,
-      },
+    //   {
+    //     path: "/SignUp",
+    //     element: <SignUp/>,
+    //   },
       {
         path: "/Blogs",
         element: <Blogs />,

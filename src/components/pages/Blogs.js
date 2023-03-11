@@ -13,7 +13,8 @@ const Blogs = () => {
 
   // console.log(blogs, "from Blogs.js");
   if (blogs.length > 3) {
-    blogs = blogs.splice(3, 1);
+    blogs = blogs.splice(0, 3);
+    
   }
 
   return (

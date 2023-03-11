@@ -23,7 +23,7 @@ const [error,setError] = useState("")
     login(email,password).then(result =>{
       // console.log(result.user,"from firebase");
       navigate('/')
-      Swal.fire("Successfully Logout", "", "success");
+      Swal.fire("Successfully Login", "", "success");
 
   })
   .catch(err =>setError(err.message))

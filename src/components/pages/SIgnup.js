@@ -1,13 +1,12 @@
-import { AuthContext } from "authProvider/ProviderContext";
-import Link from "next/link";
-import { useRouter } from "next/router";
 import React, { useContext, useState } from "react";
 import { useForm } from "react-hook-form";
+import { Link, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
-import main_api from "../main_api";
+import { AuthContext } from "../../context/ProviderContext";
+import main_api from "../../shared/main_api";
 
 const SignUp = () => {
-  const { createUser } = useContext(AuthContext);
+  const { createUser, user } = useContext(AuthContext);
   const [error, setError] = useState("");
   // console.log(createUser);
   const {
@@ -17,7 +16,7 @@ const SignUp = () => {
     formState: { errors },
   } = useForm();
 
-  const router = useRouter();
+  const navigate = useNavigate();
 
   const handleLogin = (data) => {
     const email = data.email;
@@ -25,13 +24,17 @@ const SignUp = () => {
     // console.log(email,password);
     const user = { name: "Muntasir Mihan", email, password, role: "admin" };
 
-    createUser(email, password)
-      .then((result) => {
-        console.log(result.user, "from firebase");
-        addUser(user);
-        reset();
-      })
-      .catch((err) => setError(err.message));
+    if (user.email) {
+      createUser(email, password)
+        .then((result) => {
+          console.log(result.user, "from firebase");
+          addUser(user);
+          reset();
+        })
+        .catch((err) => setError(err.message));
+    } else {
+      navigate("/");
+    }
   };
 
   const addUser = (user) => {
@@ -46,7 +49,7 @@ const SignUp = () => {
       .then((result) => {
         if (result) {
           Swal.fire("Sign Up", "", "success");
-          router.push("/");
+          navigate(-1);
         } else {
           setError(result.error);
         }
@@ -143,7 +146,7 @@ const SignUp = () => {
                   <p className="text-xs text-red-600">{error}</p>
                   <p>
                     <span> Already Have account ? </span>
-                    <Link href="/routes/login" className="text-sm font-mono">
+                    <Link to="/Login" className="text-sm font-mono">
                       Log In .....
                     </Link>
                   </p>
