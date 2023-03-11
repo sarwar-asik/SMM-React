@@ -54,7 +54,11 @@ const AllBlogs = () => {
                 >
                   <p className="text-2xl font-bold leading-5">{blogs.name}</p>
                 </Link>
-                <p className="mb-4  text-slate-600">{blog.detail}</p>
+                <p className="mb-4  text-slate-600">
+                  {blog.detail.length > 110
+                    ? blog.detail.slice(0, 110) + "...."
+                    : blog.detail}
+                </p>
                 <section className="flex justify-between">
                   <button className="bg-[#41a3e5] px-5 py-2 text-[18px] rounded text-white font-bold ">
                     See Details
