@@ -36,7 +36,6 @@ const AllBlogs = () => {
                 alt="MyImage"
                 key={new Date().getTime()}
               />
-
               <div className="py-5">
                 <section className="flex justify-between">
                   <p className="mb-2 text-xs  font-semibold text-gray-600 uppercase">
