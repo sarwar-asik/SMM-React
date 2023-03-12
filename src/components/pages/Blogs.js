@@ -51,7 +51,7 @@ const Blogs = () => {
               <div className="py-5">
                 <section className="flex justify-between">
                   <p className="mb-2 text-xs  font-semibold text-gray-600 uppercase">
-                    {blog.time}
+                    {blog.date}
                   </p>
                   <h5 className="text-[24px] text-[#3594d3] font-semibold font-mono">
                     {" "}
@@ -63,7 +63,7 @@ const Blogs = () => {
                   aria-label="Article"
                   className="inline-block mb-3 text-black transition-colors duration-200 hover:text-deep-purple-accent-700"
                 >
-                  <p className="text-2xl font-bold leading-5">{blog.name}</p>
+                  <p className="text-2xl font-bold leading-7">{blog.name}</p>
                 </Link>
                 <p className="mb-4  text-slate-600">
                   {blog.detail.length > 84

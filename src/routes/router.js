@@ -5,6 +5,7 @@ import AddBlogs from "../components/pages/AddBlogs";
 import AllBlogs from "../components/pages/AllBlogs";
 import Blogs from "../components/pages/Blogs";
 import Contacts from "../components/pages/Contacts";
+import CustomizeBlog from "../components/pages/CustomizeBlog";
 import EditBlogs from "../components/pages/EditBlogs";
 import Header from "../components/pages/Header";
 import Login from "../components/pages/Login";
@@ -53,6 +54,10 @@ const router = createBrowserRouter([
     //     path: "/SignUp",
     //     element: <SignUp/>,
     //   },
+      {
+        path: "/customize",
+        element: <CustomizeBlog/>,
+      },
       {
         path: "/Blogs",
         element: <Blogs />,

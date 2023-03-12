@@ -1,4 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 import { AuthContext } from "../../context/ProviderContext";
 import main_api from "../../shared/main_api";
@@ -37,9 +38,13 @@ const [refresh,setRefresh] = useState(null)
           Swal.fire(result.error, "", "error");
         }
         setRefresh("refresh")
-        
       })
   };
+
+const editBlogs =data =>{
+
+}
+
   return (
     <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20 ">
       <h2 className="text-4xl font-bold font-serif mt-2  mx-auto w-[100%] text-center">
@@ -59,10 +64,8 @@ const [refresh,setRefresh] = useState(null)
                 <img
                   className="w-full lg:w-[200px] mx-auto  rounded-[3%]"
                   src={img}
-                  key={new Date().getTime()}  
                   // width={300}
                   // height={300}
-
                   alt="Blog Img"
                 />
               </figure>
@@ -71,8 +74,9 @@ const [refresh,setRefresh] = useState(null)
                 <p className="text-[14px] font-[600] text-slate-500">
                   {detail}
                 </p>
+                <h6 className="text-[13px] font-[500] font-sans ">{date}</h6>
                 <aside className="flex justify-between">
-                  <h6 className="text-[13px] font-[500] font-sans ">{date}</h6>
+                  <Link to={{pathname:"/customize" }} state={blog} className="text-[18px] font-[700] font-serif">⋈ Edit⋈ </Link>
                   <button
                     onClick={() => deleteBlog(blog)}
                     className="bg-red-500 font-semibold rounded px-3 py-2 text-white"
