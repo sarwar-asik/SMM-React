@@ -26,7 +26,7 @@ const Header = () => {
 
           <div className="flex flex-col items-center md:flex-row gap-3">
             <a
-              href="https://www.linkedin.com/in/shah-muntacher-hossain-mihan-7120541b5/"
+              href="https://drive.google.com/file/d/11JwM5CXq-QsdFnC3p15kgpcZeTA89aJz/view"
               target="_blank"
               rel="noopener noreferrer"
               title="MY CV Link"

@@ -27,7 +27,7 @@ const AddBlogs = () => {
     // console.log( photo);
   };
 
-  const url = `https://api.imgbb.com/1/upload?expiration=600&key=0a1c47a73590977963bf7432c2ef0259`;
+  const url = `https://api.imgbb.com/1/upload?key=0a1c47a73590977963bf7432c2ef0259`;
 
   // console.log("imagebburl", url);
 

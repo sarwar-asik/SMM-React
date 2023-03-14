@@ -50,10 +50,10 @@ const router = createBrowserRouter([
         path: "/EditBlogs",
         element: <EditBlogs />,
       },
-    //   {
-    //     path: "/SignUp",
-    //     element: <SignUp/>,
-    //   },
+      {
+        path: "/SignUp",
+        element: <SignUp/>,
+      },
       {
         path: "/customize",
         element: <CustomizeBlog/>,
