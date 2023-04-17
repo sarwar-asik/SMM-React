@@ -30,7 +30,7 @@ const Header = () => {
               target="_blank"
               rel="noopener noreferrer"
               title="MY CV Link"
-              className="bg-[#41a3e5] px-5 py-2 text-[18px] rounded text-white font-bold "
+              className="bg-primary px-5 py-2 text-[18px] rounded text-white font-bold "
             >
               My CV
             </a>
@@ -44,9 +44,9 @@ const Header = () => {
 
             <section className="flex gap-3">
               <Link
-                href="/routes/Header"
+                to="/Contacts"
                 aria-label=""
-                className="bg-[#41a3e5] px-5 py-2 text-[18px] rounded text-white font-bold "
+                className="bg-primary px-5 py-2 text-[18px] rounded text-white font-bold "
               >
                 About Me
               </Link>

@@ -56,7 +56,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="bg-[#85CDFD] rounded-b-sm">
+    <div className="bg-primary rounded-b-sm">
       <div className=" py-5 mx-auto px-5">
         <div className="relative flex items-center justify-between">
           <Link
@@ -65,7 +65,7 @@ const Navbar = () => {
             title="Company"
             className="inline-flex items-center"
           >
-            <svg
+            {/* <svg
               className="w-8 text-teal-accent-400"
               viewBox="0 0 24 24"
               strokeLinejoin="round"
@@ -79,7 +79,7 @@ const Navbar = () => {
               <rect x="3" y="17" width="7" height="6" />
               <rect x="14" y="1" width="7" height="6" />
               <rect x="14" y="11" width="7" height="12" />
-            </svg>
+            </svg> */}
 
             <span className="ml-2 text-xl lg:text-xl sm:text-sm font-bold tracking-wide text-gray-100 uppercase">
               Shah Muntacher Hossain
@@ -111,7 +111,7 @@ const Navbar = () => {
               className="p-2 -mr-1 transition duration-200 rounded focus:outline-none focus:shadow-outline"
               onClick={() => setIsMenuOpen(true)}
             >
-              <svg className="w-5 text-gray-600" viewBox="0 0 24 24">
+              <svg className="w-5 text-gray-200" viewBox="0 0 24 24">
                 <path
                   fill="currentColor"
                   d="M23,13H1c-0.6,0-1-0.4-1-1s0.4-1,1-1h22c0.6,0,1,0.4,1,1S23.6,13,23,13z"

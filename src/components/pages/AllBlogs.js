@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import main_api from "../../shared/main_api";
+import Loader from "../../shared/Loader";
 
 const AllBlogs = () => {
   let [blogs, setBlogs] = useState([]);
@@ -11,6 +12,8 @@ const AllBlogs = () => {
       .then((blogs) => setBlogs(blogs));
   }, []);
 
+
+
   return (
     <div className="px-4 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20 text-center">
       <h2 className="mt-1 text-3xl font-bold font-serif">MY Latest Blogs</h2>
@@ -18,6 +21,14 @@ const AllBlogs = () => {
         There are some latest blogs of mine . You can Explore my blogs from here
         .
       </p>
+
+      {
+        blogs.length < 1 &&
+        <div className="mt-1 text-xl font-bold font-serif text-center">
+          <Loader/>
+          
+        </div>
+      }
 
       <div className="grid gap-5 lg:grid-cols-3 sm:max-w-sm sm:mx-auto lg:max-w-full">
         {/*  */}
@@ -59,7 +70,7 @@ const AllBlogs = () => {
                     : blog.detail}
                 </p>
                 <section className="flex justify-between">
-                  <button className="bg-[#41a3e5] px-5 py-2 text-[18px] rounded text-white font-bold ">
+                  <button className="bg-primary px-5 py-2 text-[18px] rounded text-white font-bold ">
                     See Details
                   </button>
 
@@ -67,7 +78,7 @@ const AllBlogs = () => {
                     href={blog?.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="bg-[#41a3e5] px-5 py-2 text-[18px] rounded text-white font-bold "
+                    className="bg-primary px-5 py-2 text-[18px] rounded text-white font-bold "
                   >
                     Visit
                   </a>
