@@ -16,7 +16,6 @@ const Blogs = () => {
   if (blogs.length > 3) {
     blogs = blogs.splice(0, 3);
   }
- 
 
   return (
     <div className="px-4 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20 text-center">
@@ -34,13 +33,11 @@ const Blogs = () => {
           
         </div>
       )} */}
-      {
-        blogs.length < 1 &&
+      {blogs.length < 1 && (
         <div className="mt-1 text-xl font-bold font-serif text-center">
-          <Loader/>
-          
+          <Loader />
         </div>
-      }
+      )}
 
       <div className="grid gap-5 lg:grid-cols-3 sm:max-w-sm sm:mx-auto lg:max-w-full">
         {/*  */}
@@ -103,7 +100,7 @@ const Blogs = () => {
         <section className="py-5 shadow-2xl w-[30%] mx-auto">
           <Link
             to="/allBlogs"
-            className="bg-slate-700 text-center mx-auto sm:px-[36px] lg:px-[46px] mt-5 py-3 sm:text-[15px] lg:text-[18px] rounded text-white font-bold "
+            className="bg-[#49a5e2] text-center mx-auto sm:px-[36px] lg:px-[46px] mt-5 py-3 sm:text-[12px] lg:text-[18px] rounded text-white font-bold "
           >
             See All
           </Link>

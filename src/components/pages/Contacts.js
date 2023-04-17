@@ -84,7 +84,7 @@ const Contacts = () => {
           <div className="">
             <input
               type="submit"
-              className="bg-[#41a3e5] lg:px-5 px-3 py-2 text-[18px] rounded text-white font-bold "
+              className="bg-primary lg:px-5 px-3 py-2 text-[18px] rounded text-white font-bold "
               value="Send Message"
             />
           </div>

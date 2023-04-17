@@ -48,7 +48,7 @@ const Header = () => {
                 aria-label=""
                 className="bg-primary px-5 py-2 text-[18px] rounded text-white font-bold "
               >
-                About Me
+                Reach Me
               </Link>
             </section>
           </div>
