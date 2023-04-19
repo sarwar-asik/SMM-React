@@ -9,7 +9,7 @@ const Loader = () => {
         src={loaderImg}
         alt=""
       />
-      <h2 className="mb-5">Loading Data ......</h2>
+      <h2 className="mb-5">Loading Blogs ......</h2>
     </div>
   );
 };

@@ -11,8 +11,6 @@ const Navbar = () => {
 
   // const NavItem = <React.Fragment></React.Fragment>
 
-
-
   const myItems = [
     {
       name: "Home",
@@ -61,8 +59,8 @@ const Navbar = () => {
         <div className="relative flex items-center justify-between">
           <Link
             to="/"
-            aria-label="Company"
-            title="Company"
+            aria-label="Name"
+            title="Name"
             className="inline-flex items-center"
           >
             {/* <svg
@@ -99,7 +97,10 @@ const Navbar = () => {
               </li>
             ))}
             {user && (
-              <li onClick={handleLogout} className="bg-red-400 cursor-pointer p-2 font-semibold  text-white rounded">
+              <li
+                onClick={handleLogout}
+                className="bg-red-400 cursor-pointer p-2 font-semibold  text-white rounded"
+              >
                 log Out
               </li>
             )}
