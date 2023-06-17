@@ -1,4 +1,3 @@
-
 import React from "react";
 import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
@@ -9,12 +8,12 @@ import linkedIn from "../../assets/LinkedINIcon.png";
 import twitter from "../../assets/Twiiter.png";
 
 const Contacts = () => {
-  const { register, handleSubmit,reset } = useForm();
+  const { register, handleSubmit, reset } = useForm();
   const onSubmit = (data) => {
     console.log(data);
     Swal.fire("sent", "", "success");
-    if(data){
-      reset()
+    if (data) {
+      reset();
     }
   };
   return (
@@ -26,29 +25,34 @@ const Contacts = () => {
           and Contact form . I am glad to your to your message
         </p>
         <div className="flex gap-5">
-        <Link href="https://www.facebook.com/shah.muntachir" target="_blanck">
-          <img
-           
-            className="rounded-[7px] h-[30px] w-[30px] shadow-2xl"
-            src={fb}
-            alt="facebook"
-          />
-          </Link>
-          <Link href="https://www.linkedin.com/in/shah-muntacher-hossain-mihan-7120541b5/" target="_blanck">
-          <img
-        
-        className="rounded-[7px] h-[30px] w-[30px] shadow-2xl"
-            src={linkedIn}
-            alt="linkedIn"
-          />
-          </Link>
+          <a href="https://www.facebook.com/shah.muntachir" target="_blanck">
+            <img
+              className="rounded-[7px] h-[30px] w-[30px] shadow-2xl"
+              src={fb}
+              alt="facebook"
+            />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/shah-muntacher-hossain-mihan-7120541b5/"
+            target="_blanck"
+          >
+            <img
+              className="rounded-[7px] h-[30px] w-[30px] shadow-2xl"
+              src={linkedIn}
+              alt="linkedIn"
+            />
+          </a>
 
-          <img
-          
-          className="rounded-[7px] h-[30px] w-[30px] shadow-2xl"
-            src={twitter}
-            alt="Twitter"
-          />
+          <a
+            href="https://www.linkedin.com/in/shah-muntacher-hossain-mihan-7120541b5/"
+            target="_blanck"
+          >
+            <img
+              className="rounded-[7px] h-[30px] w-[30px] shadow-2xl"
+              src={twitter}
+              alt="Twitter"
+            />
+          </a>
         </div>
       </section>
       <section className="py-3 lg:px-[40px] lg:w-[80%] ">

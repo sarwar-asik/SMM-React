@@ -11,7 +11,6 @@ const Navbar = () => {
 
   // const NavItem = <React.Fragment></React.Fragment>
 
-
   const myItem2 = (
     <>
       <Link
@@ -58,12 +57,15 @@ const Navbar = () => {
           >
             Edit Blogs{" "}
           </Link>
-          
+
           <Link
             to="/addExperience"
             className="font-serif tracking-wide  transition-colors duration-200 hover:text-teal-accent-400 text-[1em]"
-          >   Add Experience{" "}</Link>
-       
+          >
+            {" "}
+            Add Experience{" "}
+          </Link>
+
           <Link
             to="/editExperience"
             className="font-serif tracking-wide  transition-colors duration-200 hover:text-teal-accent-400 text-[1em]"
@@ -73,9 +75,8 @@ const Navbar = () => {
         </>
       )}
     </>
-  );
-
- 
+  )
+  
 
   const handleLogout = () => {
     logout();
