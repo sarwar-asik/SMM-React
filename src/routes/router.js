@@ -11,6 +11,8 @@ import Header from "../components/pages/Header";
 import Login from "../components/pages/Login";
 import SignUp from "../components/pages/SIgnup";
 import ErrorPage from "../shared/Errorpage";
+import AddExperience from "../components/pages/AddExperince";
+import EditExperience from "../components/pages/EditExperince";
 
 const router = createBrowserRouter([
   {
@@ -59,8 +61,20 @@ const router = createBrowserRouter([
         element: <CustomizeBlog/>,
       },
       {
+        path: "/customizeExperince",
+        element: <CustomizeBlog/>,
+      },
+      {
         path: "/Blogs",
         element: <Blogs />,
+      },
+      {
+        path: "/addExperience",
+        element: <AddExperience />,
+      },
+      {
+        path: "/editExperience",
+        element: <EditExperience />,
       },
 
     ],

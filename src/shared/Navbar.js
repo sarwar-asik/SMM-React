@@ -11,41 +11,71 @@ const Navbar = () => {
 
   // const NavItem = <React.Fragment></React.Fragment>
 
-  const myItems = [
-    {
-      name: "Home",
-      link: "/",
-    },
-    {
-      name: "Blogs",
-      link: "/Blogs",
-    },
-    {
-      name: "About Me",
-      link: "/Header",
-    },
-    {
-      name: "Contacts",
-      link: "/Contacts",
-    },
-    {
-      name: "Log In",
-      link: "/Login",
-    },
-    {
-      name: "Add Blogs",
-      link: "/AddBlogs",
-    },
-    {
-      name: "Edit Blogs",
-      link: "/EditBlogs",
-    },
-  ];
 
-  if (!user) {
-    myItems.pop();
-    myItems.pop();
-  }
+  const myItem2 = (
+    <>
+      <Link
+        to="/"
+        className="font-serif tracking-wide  transition-colors duration-200 hover:text-teal-accent-400 text-[1em]"
+      >
+        Home{" "}
+      </Link>
+      <Link
+        to="/Blogs"
+        className="font-serif tracking-wide  transition-colors duration-200 hover:text-teal-accent-400 text-[1em]"
+      >
+        Blogs{" "}
+      </Link>
+      <Link
+        to="/Header"
+        className="font-serif tracking-wide  transition-colors duration-200 hover:text-teal-accent-400 text-[1em]"
+      >
+        About Me{" "}
+      </Link>
+      <Link
+        to="/Contacts"
+        className="font-serif tracking-wide  transition-colors duration-200 hover:text-teal-accent-400 text-[1em]"
+      >
+        Contacts{" "}
+      </Link>
+      <Link
+        to="/Login"
+        className="font-serif tracking-wide  transition-colors duration-200 hover:text-teal-accent-400 text-[1em]"
+      >
+        Login{" "}
+      </Link>
+      {user?.email && (
+        <>
+          <Link
+            to="/AddBlogs"
+            className="font-serif tracking-wide  transition-colors duration-200 hover:text-teal-accent-400 text-[1em]"
+          >
+            Add Blogs{" "}
+          </Link>
+          <Link
+            to="/EditBlogs"
+            className="font-serif tracking-wide  transition-colors duration-200 hover:text-teal-accent-400 text-[1em]"
+          >
+            Edit Blogs{" "}
+          </Link>
+          
+          <Link
+            to="/addExperience"
+            className="font-serif tracking-wide  transition-colors duration-200 hover:text-teal-accent-400 text-[1em]"
+          >   Add Experience{" "}</Link>
+       
+          <Link
+            to="/editExperience"
+            className="font-serif tracking-wide  transition-colors duration-200 hover:text-teal-accent-400 text-[1em]"
+          >
+            Edit Experience
+          </Link>
+        </>
+      )}
+    </>
+  );
+
+ 
 
   const handleLogout = () => {
     logout();
@@ -63,39 +93,13 @@ const Navbar = () => {
             title="Name"
             className="inline-flex items-center"
           >
-            {/* <svg
-              className="w-8 text-teal-accent-400"
-              viewBox="0 0 24 24"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeMiterlimit="10"
-              stroke="currentColor"
-              fill="none"
-            >
-              <rect x="3" y="1" width="7" height="12" />
-              <rect x="3" y="17" width="7" height="6" />
-              <rect x="14" y="1" width="7" height="6" />
-              <rect x="14" y="11" width="7" height="12" />
-            </svg> */}
-
-            <span className="ml-2 text-xl lg:text-xl sm:text-sm font-bold tracking-wide text-gray-100 uppercase">
+            <span className="ml-2 text-xl text-white lg:text-xl sm:text-sm font-bold tracking-wide  uppercase">
               Shah Muntacher Hossain
             </span>
           </Link>
-          <ul className="items-center hidden space-x-8 lg:flex">
-            {myItems.map((item, i) => (
-              <li key={i}>
-                <Link
-                  to={item.link}
-                  // aria-label={item.name}
-                  title={item.name}
-                  className="font-serif tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400 text-[18px]"
-                >
-                  {item.name}
-                </Link>
-              </li>
-            ))}
+          <ul className="items-center hidden space-x-8 lg:flex text-white">
+            {myItem2}
+
             {user && (
               <li
                 onClick={handleLogout}
@@ -175,25 +179,12 @@ const Navbar = () => {
                     </div>
                   </div>
                   <nav>
-                    <ul className="space-y-4">
-                      {myItems.map((item) => (
-                        <li key={item}>
-                          <Link
-                            to={item.link}
-                            aria-label={item.name}
-                            onClick={() => setIsMenuOpen(false)}
-                            title={item.name}
-                            className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
-                          >
-                            {item.name}
-                          </Link>
-                        </li>
-                      ))}
-
+                    <ul className="space-y-4 flex flex-col text-slate-700">
+                      {myItem2}
                       {user && (
                         <li
                           onClick={handleLogout}
-                          className="bg-red-400 cursor-pointer p-2 font-semibold w-1/2 text-white rounded"
+                          className="bg-red-400 cursor-pointer p-2 font-semibold  text-white rounded"
                         >
                           log Out
                         </li>

@@ -24,17 +24,17 @@ const SignUp = () => {
     // console.log(email,password);
     const user = { name: "Muntasir Mihan", email, password, role: "admin" };
 
-    if (user.email) {
-      createUser(email, password)
-        .then((result) => {
-          console.log(result.user, "from firebase");
-          addUser(user);
-          reset();
-        })
-        .catch((err) => setError(err.message));
-    } else {
-      navigate("/");
-    }
+    // if (user.email) {
+    //   createUser(email, password)
+    //     .then((result) => {
+    //       console.log(result.user, "from firebase");
+    //       addUser(user);
+    //       reset();
+    //     })
+    //     .catch((err) => setError(err.message));
+    // } else {
+    //   navigate("/");
+    // }
   };
 
   const addUser = (user) => {
